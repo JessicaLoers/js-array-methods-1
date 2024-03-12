@@ -1,32 +1,26 @@
 const recipes = [
   {
-    title: "Crepes",
+    title: 'Crepes',
     duration: 60,
-    ingredients: ["butter", "flour", "eggs", "milk", "salt"],
+    ingredients: ['butter', 'flour', 'eggs', 'milk', 'salt'],
     servings: 3,
   },
   {
-    title: "Scrambled Eggs",
+    title: 'Scrambled Eggs',
     duration: 20,
-    ingredients: ["eggs", "milk", "salt"],
+    ingredients: ['eggs', 'milk', 'salt'],
     servings: 2,
   },
   {
-    title: "Vegan Salmon",
+    title: 'Vegan Salmon',
     duration: 60 * 24 * 3, // 3 days
-    ingredients: [
-      "carrots",
-      "olive oil",
-      "nori sheets",
-      "liquid smoke",
-      "soy sauce",
-    ],
+    ingredients: ['carrots', 'olive oil', 'nori sheets', 'liquid smoke', 'soy sauce'],
     servings: 10,
   },
   {
-    title: "Carrot Cake",
+    title: 'Carrot Cake',
     duration: 120,
-    ingredients: ["carrots", "flour", "eggs", "salt", "milk", "sugar"],
+    ingredients: ['carrots', 'flour', 'eggs', 'salt', 'milk', 'sugar'],
     servings: 10,
   },
 ];
@@ -34,19 +28,22 @@ const recipes = [
 /*
  1: `map` exercises
 */
+// ['Crepes', ...]
+const onlyTitles = recipes.map((recipe) => recipe.title);
 
-const onlyTitles = null; // ['Crepes', ...]
+// ['Crepes (60min)', ...]
+const titlesWithDuration = recipes.map((recipe) => `${recipe.title} (${recipe.duration}min)`);
 
-const titlesWithDuration = null; // ['Crepes (60min)', ...]
-
-const timePerServing = null; // [20, 10, 432, 12]
+// [20, 10, 432, 12]
+const timePerServing = recipes.map((recipe) => recipe.duration / recipe.servings);
 
 // EXTRA:
 
 // HINT: use first map() and then Array.prototype.join() with "method chaining" like so:
 // myArray.map(...).join(', ');
 
-const allTitlesInOneString = null; // 'Crepes, Scrambled Eggs, ...'
+// 'Crepes, Scrambled Eggs, ...'
+const allTitlesInOneString = recipes.map((recipe) => recipe.title).join(', ');
 
 // For more information how to join an array,
 // see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join#joining_an_array_four_different_ways
@@ -55,11 +52,13 @@ const allTitlesInOneString = null; // 'Crepes, Scrambled Eggs, ...'
  2: `filter` exercises
 */
 
-const recipesThatOnlyTake60minutesOrLess = null;
+const recipesThatOnlyTake60minutesOrLess = recipes.filter((recipe) => recipe.duration <= 60);
 
-const allRecipesWithMoreThan2Servings = null;
+const allRecipesWithMoreThan2Servings = recipes.filter((recipe) => recipe.servings > 2);
 
-const allRecipesWithTitlesLongerThan12Characters = null;
+const allRecipesWithTitlesLongerThan12Characters = recipes.filter(
+  (recipe) => recipe.title.length > 12
+);
 
 export {
   onlyTitles,
