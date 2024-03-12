@@ -1,6 +1,6 @@
 # Array Methods: `filter`
 
-This codesandbox offers a some exercises to recap the array method `filter`. Let's dive directly into it!
+This challenge offers some exercises to recap the array method `filter`. Let's dive directly into it!
 
 ## Task
 
