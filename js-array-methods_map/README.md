@@ -1,6 +1,6 @@
 # Array Methods: `map`
 
-This codesandbox offers a some exercises to recap the array method `map`. Let's dive directly into it!
+This challenge offers a some exercises to recap the array method `map`. Let's dive directly into it!
 
 ## Task
 
