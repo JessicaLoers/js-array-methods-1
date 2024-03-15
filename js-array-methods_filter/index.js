@@ -30,7 +30,7 @@ const allCardsWith3Tags = cards.filter((card) => card.tags.length === 3);
 const allCardsThatAreNotBookmarked = cards.filter((card) => !card.isBookmarked);
 
 const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter(
-  (card) => card.isBookmarked && card.tags.includes('html' || 'js')
+  (card) => card.isBookmarked && (card.tags.includes('js') || card.tags.includes('html'))
 );
 
 export {
